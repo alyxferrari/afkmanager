@@ -1,0 +1,40 @@
+modLoader="javafml" #mandatory
+loaderVersion="[32,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="GNU General Public License v3.0"
+issueTrackerURL="https://github.com/alyxferrari/afkmanager/issues" #optional
+[[mods]] #mandatory
+modId="afkmanager" #mandatory
+version="1.0" #mandatory
+ # A display name for the mod
+displayName="AFK Manager" #mandatory
+# A URL for the "homepage" for this mod, displayed in the mod UI
+displayURL="https://github.com/alyxferrari/afkmanger" #optional
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="examplemod.png" #optional
+# A text field displayed in the mod UI
+credits="Thanks to @littlejdude on GitHub for the original 1.12.2 code" #optional
+# A text field displayed in the mod UI
+authors="Written by Alyx Ferrari" #optional
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+AFK Manager is a server-side Minecraft Forge mod that adds AFK notifications and commands to Minecraft, similar to Bukkit's Essentials plugin.
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.examplemod]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[32,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="SERVER"
+# Here's another dependency
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.1]"
+    ordering="NONE"
+    side="BOTH"
